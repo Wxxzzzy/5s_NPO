@@ -55,11 +55,11 @@ public class CalculatorTest
     }
 
     [Test]
-    public void ExtractRoot_ShouldBeEqualTo_ExpectedRootExtraction()
+    public void ExtractRoot_ShouldBe_Failed()
     {
         var number = 3234;
         var power = 5;
-        var expectedExtraction = Math.Round(Math.Pow(number, 1 / power), 2);
+        var expectedExtraction = Math.Pow(number, 1 / power);
         var actualExtraction = Calculator.ExtractRoot(number, power);
         Assert.That(actualExtraction, Is.EqualTo(expectedExtraction));
     }
@@ -69,8 +69,8 @@ public class CalculatorTest
     {
         var number = 5.555555;
         var power = 0;
-        var expectedExponentiation = Math.Round(Math.Pow(number, 1 / power), 2);
-        var actualExponentiation = Calculator.ExtractRoot(number, power);
+        var expectedExponentiation = Math.Round(Math.Pow(number, power), 2);
+        var actualExponentiation = Calculator.Exponentiate(number, power);
         Assert.That(actualExponentiation, Is.EqualTo(expectedExponentiation));
     }
 
@@ -80,7 +80,7 @@ public class CalculatorTest
         var number = 5;
         var power = -12;
         var expectedExponentiation = Math.Round(Math.Pow(number, power), 2);
-        var actualExponentiation = Calculator.ExtractRoot(number, power);
+        var actualExponentiation = Calculator.Exponentiate(number, power);
         Assert.That(actualExponentiation, Is.EqualTo(expectedExponentiation));
     }
 

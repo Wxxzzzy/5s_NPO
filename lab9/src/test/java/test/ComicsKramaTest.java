@@ -16,7 +16,7 @@ class ComicsKramaTest {
 
     @BeforeEach
     public void setup() {
-        driver = getDriver();
+       driver = getDriver();
     }
     private WebDriver getDriver() {
         final ChromeOptions options = new ChromeOptions();
@@ -25,7 +25,7 @@ class ComicsKramaTest {
     }
 
     @Test
-    @DisplayName("Test: go to gifts for her from menu")
+    @DisplayName("Test: select items from page")
     void giftsForHerFromMenu() throws InterruptedException {
         ComicsKramaHomePage comicsPage =
                 new ComicsKramaHomePage(driver).openPage()

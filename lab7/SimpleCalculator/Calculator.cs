@@ -19,7 +19,7 @@ public static class Calculator
             {
                 number *= originNum;
             }
-            RoundNumber(number);
+            return RoundNumber(number);
         }
 
         return RoundNumber(Math.Pow(number, power));
