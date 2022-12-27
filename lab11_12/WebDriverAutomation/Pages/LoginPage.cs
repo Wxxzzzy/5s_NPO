@@ -32,7 +32,7 @@ public class LoginPage
         this._driver = driver;
         PageFactory.InitElements(this._driver, this);
     }
-
+            
     public void OpenPage()
     {
         _driver.Navigate().GoToUrl(BASE_URL);

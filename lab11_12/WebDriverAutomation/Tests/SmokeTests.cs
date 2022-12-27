@@ -19,9 +19,9 @@ public class SmokeTests
         _steps.CloseBrowser();
     }
 
-    public void OneCanSignUpGitHub()
+    public void OneCanSignUpComicsKrama()
     {
         _steps.SignUpComicsKrama();
-        Assert.AreEqual("https://www.comicskrama.by/client_account/orders", _steps.GetCurrentPageUrl);
+        Assert.AreEqual("(", _steps.GetCurrentPageUrl);
     }
 }
