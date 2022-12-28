@@ -4,6 +4,7 @@
     <test name="UserAccess"   >
         <classes>
             <class name="test.UserRegistrationTest" />
+            <class name="test.HomePageFunctionalityTests" />
         </classes>
     </test>
 </suite>

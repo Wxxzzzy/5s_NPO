@@ -25,7 +25,7 @@ public class LoginPage extends AbstractPage{
     @FindBy(xpath = "//*[@id='client_password_confirmation']")
     private WebElement repeatPasswordInput;
 
-    @FindBy(xpath = "//input[@id='new_client']/div[8]/button")
+    @FindBy(xpath = "//*[@id='new_client']/div[8]/button")
     private WebElement signUpButton;
 
     public LoginPage(WebDriver driver){
@@ -38,13 +38,14 @@ public class LoginPage extends AbstractPage{
         return this;
     }
 
-    public String singUp(User user){
+    public String singUp(User user) throws InterruptedException {
 
         fullNameInput.sendKeys(user.getUsername());
         phoneNumberInput.sendKeys(user.getPhoneNumber());
         emailInput.sendKeys(user.getEmail());
         passwordInput.sendKeys(user.getPassword());
         repeatPasswordInput.sendKeys(user.getPassword());
+        Thread.sleep(25000);
         signUpButton.click();
 
         logger.info("Registration perfomed");
